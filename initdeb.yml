@@ -7,15 +7,26 @@
                                                                                                                                    #   fcitx-module-kimpanel    
   tasks: 
   
+  #- name: Run the equivalent of "apt-get update" as a separate step
+  #  apt:
+  #    update_cache: yes
+    
   - name: InstallSoftware
     tags: aptinst
     apt: name={{ inst }} state=latest
 
-  - name: InstallSoftware
-    tags: aptinst
-    apt: upgrade=full
+  - name: Update all packages to the latest version
+    apt:
+      upgrade: dist
 
-
+  - name: Remove dependencies that are no longer required
+    apt:
+      autoremove: yes
+    
+  - name: Remove useless packages from the cache
+    apt:
+      autoclean: yes
+    
   # Set sshd not use DNS
   #
 
