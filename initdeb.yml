@@ -3,13 +3,13 @@
   become: root
   #sudo: yes
   vars:
-    inst: [htop,screen,iptraf,expect,vim,wget,curl,dstat]
+    inst: [htop,screen,iptraf,expect,vim,wget,curl,dstat,w3m]
 
   tasks: 
   
   - name: InstallSoftware
-    apt: name={{item}} state=latest
-    with_items: " {{ inst }} "
+    apt: name={{ inst }} state=latest
+    #with_items: " {{ inst }} "
 
   # Set sshd not use DNS
   #
