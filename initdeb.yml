@@ -3,16 +3,6 @@
   sudo: yes
   tasks: 
 
-  # Init Hosts file
-  #
-  - name: Add Hostname to hosts
-    tags: sethosts
-    blockinfile: 
-      marker: "#{mark} Ansible Auto add "
-      path:  /etc/hosts
-      insertafter: "EOF"
-      block: "{{ansible_eth0.ipv4.address}}   {{ansible_hostname}}"
-
   # Set sshd not use DNS
   #
 
