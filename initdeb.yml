@@ -8,7 +8,7 @@
   tasks: 
   
   - name: InstallSoftware
-    apt name={{item}} state=latest
+    apt: name={{item}} state=latest
     with_items: " {{ inst }} "
 
   # Set sshd not use DNS
