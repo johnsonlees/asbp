@@ -1,0 +1,32 @@
+---
+#ansible-pull -U https://github.com/johnsonlees/asbp  updt.yml
+- hosts: localhost
+  become: root
+                                                                                                                   #   fcitx-module-kimpanel    
+  tasks: 
+  
+  - name: Remove useless packages from the cache
+    tags: aptcln
+    apt:
+      autoclean: yes
+    
+  - name: Run the equivalent of "apt-get update" as a separate step
+    tags: aptupd
+    apt:
+      update_cache: yes
+
+  - name: Update all packages to the latest version
+    tags: aptupgrd
+    apt:
+      upgrade: dist
+
+  - name: Remove dependencies that are no longer required
+    tags: aptrm
+    apt:
+      autoremove: yes
+    
+  - name: Remove useless packages from the cache
+    tags: aptcln
+    apt:
+      autoclean: yes
+    
