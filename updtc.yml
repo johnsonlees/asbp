@@ -9,7 +9,7 @@
   
   - name: Yum Clean All
     tags: yumcln
-    shell:
+    command:
       yum clean all
     ignore_errors: yes
   
@@ -27,7 +27,7 @@
   
   - name: Yum Clean All
     tags: yumtail
-    shell:
+    command:
       yum clean all
     ignore_errors: yes
     
