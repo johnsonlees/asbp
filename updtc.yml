@@ -1,0 +1,33 @@
+---
+#ansible-pull -U https://github.com/johnsonlees/asbp  updtc.yml
+- hosts: localhost
+  become: root
+  vars:
+    inst: [htop,screen,iptraf,expect,vim,wget,curl,dstat]
+
+  tasks: 
+  
+  - name: Yum Clean All
+    tags: yumcln
+    shell:
+      yum clean all
+    ignore_errors: yes
+  
+  - name: Yum Inst Soft
+    tags: yuminst
+    yum:
+      name: "{{ inst }}"
+      state: latest
+  
+  - name: Yum Upgrade
+    tags: yumupgrd
+    yum:
+      name: "*"
+      state: latest
+  
+  - name: Yum Clean All
+    tags: yumtail
+    shell:
+      yum clean all
+    ignore_errors: yes
+    
