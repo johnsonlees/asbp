@@ -3,7 +3,7 @@
 - hosts: localhost
   become: root
   vars:
-    inst: [htop,screen,iptraf,expect,vim,wget,curl,dstat]
+    inst: [htop,screen,tmux,iptraf,expect,vim,wget,curl,dstat]
 
   tasks: 
   
@@ -52,4 +52,4 @@
       msg: "{{virRst.stdout_lines}}"
     ignore_errors: yes
 
- 
+
