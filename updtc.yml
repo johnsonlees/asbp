@@ -9,7 +9,7 @@
   
   - name: Yum Clean All
     tags: yumcln
-    shell:
+    command:
       yum clean all
     ignore_errors: yes
   
@@ -27,8 +27,29 @@
   
   - name: Yum Clean All
     tags: yumtail
-    shell:
+    command:
       yum clean all
     ignore_errors: yes
- 
+    
+  # Delete VirNet
+  #
+  - name: Delete_virnet
+    tags: virnet
+    shell: 
+      " virsh net-destroy default "
+    ignore_errors: yes
+
+  - name: Destroy_virnet
+    tags: virnet
+    shell: 
+      " virsh net-undefine default "
+    register: virRst
+    ignore_errors: yes
+
+  - name: Get_virnet
+    tags: virnet
+    debug: 
+      msg: "{{virRst.stdout_lines}}"
+    ignore_errors: yes
+
  
