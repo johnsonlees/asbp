@@ -12,7 +12,6 @@
     shell:
       yum clean all
     ignore_errors: yes
-    warn: false
   
   - name: Yum Inst Soft
     tags: yuminst
@@ -31,5 +30,5 @@
     shell:
       yum clean all
     ignore_errors: yes
-    warn: false
-    
+ 
+ ---
