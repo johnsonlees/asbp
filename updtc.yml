@@ -3,7 +3,7 @@
 - hosts: localhost
   become: root
   vars:
-    inst: [htop,screen,tmux,nmap,iptraf,expect,vim,wget,curl,dstat]
+    inst: [epel-release,python-pip,htop,screen,tmux,nmap,iptraf,expect,vim,wget,curl,dstat]
 
   tasks: 
   
