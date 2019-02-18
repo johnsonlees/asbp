@@ -15,6 +15,7 @@ alias r50='  rtoadm    -pxxxxxxxx 192.168.30.50 & '
 alias r124=' rtodsk    -uadministrator -pxxxxxxxx 192.168.21.124  & '
 alias r230=' rto -uhd  -pxxxxxxxx 192.168.30.230 & '
 alias rh230='rto -uhd  -pxxxxxxxx 11x.3.57.xx:xxxxx & '
+alias r99='vncviewer -passwd /password/file 192.168.17.99:1 & '
 
 alias ansir=' sudo ansible '
 alias updt=' sudo ansible-pull -U https://github.com/johnsonlees/asbp updt.yml '
