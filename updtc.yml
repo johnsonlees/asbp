@@ -1,0 +1,55 @@
+---
+#ansible-pull -U https://github.com/johnsonlees/asbp  updtc.yml
+- hosts: localhost
+  become: root
+  vars:
+    inst: [epel-release,python-pip,ncurses-devel,htop,screen,tmux,nmap,iptraf,expect,vim,wget,curl,dstat]
+
+  tasks: 
+  
+  - name: Yum Clean All
+    tags: yumcln
+    command:
+      yum clean all
+    ignore_errors: yes
+  
+  - name: Yum Inst Soft
+    tags: yuminst
+    yum:
+      name: "{{ inst }}"
+      state: latest
+  
+  - name: Yum Upgrade
+    tags: yumupgrd
+    yum:
+      name: "*"
+      state: latest
+  
+  - name: Yum Clean All
+    tags: yumtail
+    command:
+      yum clean all
+    ignore_errors: yes
+    
+  # Delete VirNet
+  #
+  - name: Delete_virnet
+    tags: virnet
+    shell: 
+      " virsh net-destroy default "
+    ignore_errors: yes
+
+  - name: Destroy_virnet
+    tags: virnet
+    shell: 
+      " virsh net-undefine default "
+    register: virRst
+    ignore_errors: yes
+
+  - name: Get_virnet
+    tags: virnet
+    debug: 
+      msg: "{{virRst.stdout_lines}}"
+    ignore_errors: yes
+
+
