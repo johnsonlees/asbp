@@ -2,7 +2,6 @@
 #ansible-pull -U https://github.com/johnsonlees/asbp  updt.yml
 - hosts: localhost
   become: root
-                                                                                                                   #   fcitx-module-kimpanel    
   tasks: 
   
   - name: Remove useless packages from the cache
