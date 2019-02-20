@@ -4,7 +4,7 @@
   become: root
   #sudo: yes
   vars:
-    inst: [chromium,font-manager,fonts-wqy-microhei,ttf-mscorefonts-installer,fonts-wqy-zenhei,sshpass,python-lockfile-doc,ipython3,python-netaddr-docs,filezilla,kazam,rdesktop,htop,screen,ipcalc,iptraf,expect,vim,vim-gtk,vim-doc,wget,curl,dstat,w3m,im-switch,fcitx,fcitx-bin,fcitx-libs,fcitx-libs-dev,fcitx-table-wbpy,fcitx-config-common,fcitx-config-gtk,fcitx-data,fcitx-frontend-gtk2,fcitx-frontend-gtk3,fcitx-frontend-qt4,fcitx-frontend-qt5,fcitx-frontend-all,fcitx-modules,fcitx-module-lua,fcitx-module-dbus,fcitx-module-x11,fcitx-table,fcitx-ui-classic]
+    inst: [chromium,font-manager,fonts-wqy-microhei,ttf-mscorefonts-installer,fonts-wqy-zenhei,ufw,sshpass,python-lockfile-doc,ipython3,python-netaddr-docs,filezilla,kazam,rdesktop,htop,screen,ipcalc,iptraf,expect,vim,vim-gtk,vim-doc,wget,curl,dstat,w3m,im-switch,fcitx,fcitx-bin,fcitx-libs,fcitx-libs-dev,fcitx-table-wbpy,fcitx-config-common,fcitx-config-gtk,fcitx-data,fcitx-frontend-gtk2,fcitx-frontend-gtk3,fcitx-frontend-qt4,fcitx-frontend-qt5,fcitx-frontend-all,fcitx-modules,fcitx-module-lua,fcitx-module-dbus,fcitx-module-x11,fcitx-table,fcitx-ui-classic]
                                                                                                                                    #   fcitx-module-kimpanel    
   tasks: 
   
