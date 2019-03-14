@@ -1,0 +1,17 @@
+[Unit]
+Description=LocalGaleraCtlService
+After=network.target
+[Install]
+WantedBy=multi-user.target
+[Service]
+Type=forking
+User=root
+Group=root
+ExecStart=/bin/bash -c "/usr/bin/startglr.sh start "
+ExecStop=/bin/bash -c "/usr/bin/startglr.sh stop "
+KillSignal=SIGTERM
+SendSIGKILL=no
+
+TimeoutStopSec=150min
+TimeoutStartSec=150min
+
