@@ -13,6 +13,12 @@
       yum clean all
     ignore_errors: yes
   
+  - name: Yum Inst epel
+    tags: yuminstepel
+    yum:
+      name: "epel-release"
+      state: latest
+  
   - name: Yum Inst Soft
     tags: yuminst
     yum:
