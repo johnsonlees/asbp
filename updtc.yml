@@ -3,7 +3,7 @@
 - hosts: localhost
   become: root
   vars:
-    inst: [epel-release,ncurses-devel,htop,screen,tmux,nmap,iptraf,expect,bridge-utils,vim,wget,curl,dstat]
+    inst: [epel-release,ncurses-devel,htop,screen,tmux,nmap,iptraf,expect,bridge-utils,vim,wget,curl,whois,dstat]
 
   tasks: 
   
