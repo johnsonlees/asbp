@@ -51,12 +51,22 @@
       regexp: "^.*StrictHostKeyChecking.*$"
       line: "StrictHostKeyChecking no"
 
+
   - name: Sshd_Service_Restart
     tags: sshd
     service:
      name=sshd
      state=restarted
      enabled=yes
+    ignore_errors: yes
+    
+  - name: Sshd_Service_Restart
+    tags: sshd
+    service:
+     name=ssh
+     state=restarted
+     enabled=yes
+    ignore_errors: yes
 
   - name: Get_Sshd_cfg
     tags: sshd
