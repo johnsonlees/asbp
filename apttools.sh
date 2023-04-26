@@ -1,0 +1,2 @@
+apt install axel ufw sshpass python-lockfile-doc ipython3 python-netaddr-docs screen tmux ipcalc iptraf expect vim vim-doc wget bridge-utilsttpie aria2 fail2ban supervisor inxi ansible dstat nmon iftop ctop iotop httpie nethogs nload iftop iptraf bmon slurm tcptrack cbm collectl etherape ipbanprocinfo hping3 ipmitool freeipmi-tools spf-tools-perl swaks freeipmi-ipmidetect freeipmi-bmc-watchdog mailutils-mh mailutils-doc python-urwid-doc 
+
